@@ -8,7 +8,8 @@ class Routes{
 
     categoriesRoutes(app:AppType){
         app.post("/postCategory",(req:Request,res:Response)=>{
-            const categoryObject = new CategoryInstance(req.body);
+            const date = Date.now();
+            const categoryObject = new CategoryInstance({id:date,...req.body});
             categoryObject.save((err,docs)=>{
                 if (!err){
                     res.status(200).json({"status":true})
