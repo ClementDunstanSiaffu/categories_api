@@ -18,7 +18,7 @@ class Routes{
                 }
             })
         }),
-        app.get("/getCategory",(req:Request,res:Response)=>{
+        app.post("/getCategory",(req:Request,res:Response)=>{
             CategoryInstance.find((err,docs)=>{
                 if (!err){
                     res.status(200).json(docs);
