@@ -3,15 +3,9 @@ import mongoose from "mongoose";
 
 const categorySchema = new mongoose.Schema({
     
-    id:{
-        type:String
-    },
-    categoryName:{
-        type:String
-    },
-    categoryImage:{
-        type:String
-    }
+    id:{type:String},
+    categoryName:{type:String},
+    categoryImage:{type:String}
     
 })
 
